@@ -1,0 +1,7 @@
+export const UPDATE_ROOM_DATA = 'DATA/UPDATE'
+export const UPDATE_ROOM_X_DATA = 'data/room/update'
+export const ADD_NEW_USER = 'DATA/USER/NEW'
+export const ADD_NEW_MESSAGE = 'data/message/new'
+export const REMOVE_USER = 'DATA/USER/REMOVE'
+export const UPDATE_USER = 'data/user/update'
+export const UPDATE_ADMIN_DATA = 'data/room/admin/update'
