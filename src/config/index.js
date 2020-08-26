@@ -1,12 +1,12 @@
 export default {
   client: {
-    url: 'https://desafiados.herokuapp.com/'
+    url: 'https://localhost:3333/'
   },
   api: {
-    base: 'https://desafiados-api.herokuapp.com/'
+    base: 'https://localhost:3333/'
   },
   socket: {
-    base: 'wss://desafiados-api.herokuapp.com/'
+    base: 'wss://localhost:3333/'
   },
   game: {
     categorys: {

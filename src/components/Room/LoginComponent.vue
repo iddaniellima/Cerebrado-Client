@@ -109,6 +109,7 @@ export default {
     room_difficulty: '',
     room_type: 'boolean',
     room_users_connected: 0,
+    room_data: {},
     categorys: {
       9: 'Geral',
       27: 'Animais',
@@ -144,13 +145,21 @@ export default {
       multiple: 'Múltiplas'
     }
   }),
+  metaInfo () {
+    return {
+      title: `${this.room_data.room_title} - Desafiados`
+    }
+  },
   async created () {
     axios.get(`${config.api.base}room/${this.$route.params.code}`).then(r => {
+      this.room_data = r.data.get_room
       this.room_title = r.data.get_room.room_title
       this.room_users_connected = r.data.get_room.users.length
       this.room_category = r.data.get_room.room_category
       this.room_difficulty = r.data.get_room.room_difficulty
       this.room_type = r.data.get_room.room_type
+    }).catch(e => {
+      this.$router.push('/')
     })
   },
   methods: {
